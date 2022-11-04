@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="ru" >
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>API сервис - Документация hello.shoppify.ru</title>
+    <title>Загрузка модулей - Документация hello.shoppify.ru</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "API \u0441\u0435\u0440\u0432\u0438\u0441";
-        var mkdocs_page_input_path = "api.md";
+        var mkdocs_page_name = "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u043c\u043e\u0434\u0443\u043b\u0435\u0439";
+        var mkdocs_page_input_path = "download.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -34,12 +34,12 @@
           <a href=".." class="icon icon-home"> Документация hello.shoppify.ru
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Поиск в документации" title="Введите поисковый запрос" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Навигационное меню">
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="..">Введение</a>
                 </li>
@@ -48,18 +48,18 @@
                 <li class="toctree-l1"><a class="reference internal" href="../initial/">Подготовка сервера</a>
                 </li>
               </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../download/">Загрузка модулей</a>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Загрузка модулей</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../panel/">Установка панели</a>
                 </li>
               </ul>
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="./">API сервис</a>
-    <ul class="current">
-    </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../api/">API сервис</a>
                 </li>
               </ul>
               <ul>
@@ -75,7 +75,7 @@
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+      <nav class="wy-nav-top" role="navigation" aria-label="Мобильная версия навигации">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="..">Документация hello.shoppify.ru</a>
         
@@ -83,8 +83,8 @@
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>API сервис</li>
+    <li><a href=".." class="icon icon-home" alt="Документация"></a> &raquo;</li>
+      <li>Загрузка модулей</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -93,34 +93,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="api">API сервис</h1>
-<p>Обязательный модуль для работы панели</p>
-<p>Перейдите в папку shoppify-api <code>cd ~/shoppify-api</code></p>
-<pre><code class="language-bash">yarn
-yarn db:setup
-</code></pre>
-<p>После этих команд в папке shoppify-api появится файл базы данных database.sqlite
-Вы можете его скачать по желанию и открыть программой DB Browser (SQLite) </p>
-<p>Теперь запустите сервис <code>yarn start:dev</code>
-И перейдите по адресу 'api.ваш_домен' </p>
-<p>Если вы верно настроили сервер и домены, то открыв 'api.ваш_домен' - вы увидите сообщение о доступности сервиса.</p>
-<p>Теперь создайте админ юзера </p>
-<pre><code class="language-bash">curl --request POST \
-  --url {api.ваш_домен}/auth/registration \
-  --header 'Content-Type: application/json' \
-  --data '{
-    &quot;login&quot;: &quot;admin&quot;,
-    &quot;password&quot;: &quot;admin&quot;
-  }'
-</code></pre>
-<p>В ответ должен прийти token</p>
-<p>Остановите сервис <code>ctrl+C</code> и переходите к настройке модуля "Бот"</p>
+                <h1 id="_1">Загрузка модулей</h1>
               
             </div>
           </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../panel/" class="btn btn-neutral float-left" title="Установка панели"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../daddy/" class="btn btn-neutral float-right" title="Бот сервис">Next <span class="icon icon-circle-arrow-right"></span></a>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Навигация по странице">
+        <a href="../initial/" class="btn btn-neutral float-left" title="Подготовка сервера"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+        <a href="../panel/" class="btn btn-neutral float-right" title="Установка панели">Вперед <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -129,7 +108,7 @@ yarn db:setup
     <!-- Copyright etc -->
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Собрано в <a href="https://www.mkdocs.org/">MkDocs</a> с использованием <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> от <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
           
         </div>
@@ -139,14 +118,14 @@ yarn db:setup
 
   </div>
 
-  <div class="rst-versions" role="note" aria-label="Versions">
+  <div class="rst-versions" role="note" aria-label="Версии">
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../panel/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../initial/" style="color: #fcfcfc">&laquo; Назад</a></span>
     
     
-      <span><a href="../daddy/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../panel/" style="color: #fcfcfc">Вперед &raquo;</a></span>
     
   </span>
 </div>

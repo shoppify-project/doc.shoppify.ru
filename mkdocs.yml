@@ -1,0 +1,15 @@
+site_name: Документация hello.shoppify.ru
+docs_dir: src
+theme:
+    name: readthedocs
+    locale: ru
+   
+
+nav:
+    - Введение: 'index.md'
+    - Подготовка сервера: 'initial.md'
+    - 'download.md'
+    - 'panel.md'
+    - 'api.md'
+    - 'daddy.md'
+    - 'run.md'
